@@ -1,7 +1,7 @@
 {
   "STOCKSMP INDEX": {
     "History": [1,50,100,90,100,90,100,150,140,130,120,130,140,120,110],
-    "Original": 1000,
+    "Original": 1,
     "Category": "Main"
   },
   "Diamonds": {
@@ -55,4 +55,5 @@
     "Category": "Trending"
   }
 }
+
 
