@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     setInterval(fetchData, 5000); 
     
     // Run the RANDOM PRICE ALGO every 5 minutes
-    setInterval(simulateMarketMovement, 30); 
+    setInterval(simulateMarketMovement, 100); 
 });
 
 async function fetchData() {
@@ -189,5 +189,6 @@ function setupCalculator() {
     const calcInput = document.getElementById('calc-qty');
     if(calcInput) calcInput.addEventListener('input', updateCalculator);
 }
+
 
 
