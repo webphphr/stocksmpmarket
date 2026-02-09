@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto+Mono&display=swap');
+
+/* GLOBAL STYLES */
+body {
+    background-color: #0d1117;
+    color: #d1d4dc;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* VIEW TOGGLING */
+.hidden {
+    display: none !important;
+}
+
+/* TICKER ANIMATION */
+.ticker-content { 
+    display: inline-flex; 
+    white-space: nowrap;
+    animation: scroll-ticker 40s linear infinite; 
+    gap: 4rem; 
+}
+
+@keyframes scroll-ticker { 
+    0% { transform: translateX(0); } 
+    100% { transform: translateX(-50%); } 
+}
+
+/* WATCHLIST / SIDEBAR */
+.watchlist-item { 
+    border-left: 3px solid transparent; 
+    transition: all 0.2s; 
+    border-bottom: 1px solid #1e222d;
+}
+
+.watchlist-item:hover { 
+    background: #1e222d; 
+}
+
+.watchlist-item.active { 
+    background: #1e222d; 
+    border-left-color: #2962ff; 
+}
+
+/* HOME SCREEN CARDS */
+#popular-grid .group:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px -10px rgba(41, 98, 255, 0.2);
+}
+
+.group {
+    transition: all 0.3s ease;
+}
+
+/* CATEGORY HEADERS */
+.sticky {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/* SCROLLBARS */
+::-webkit-scrollbar { 
+    width: 6px; 
+    height: 6px; 
+}
+
+::-webkit-scrollbar-track { 
+    background: #0d1117; 
+}
+
+::-webkit-scrollbar-thumb { 
+    background: #2a2e39; 
+    border-radius: 10px; 
+}
+
+::-webkit-scrollbar-thumb:hover { 
+    background: #363a45; 
+}
+
+/* CHART CONTAINER FIX */
+#main-chart {
+    min-height: 400px;
+    width: 100%;
+}
