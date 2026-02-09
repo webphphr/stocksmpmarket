@@ -1,16 +1,57 @@
 {
-    "STOCKSMP INDEX": { "History": [300, 450, 500, 300,450,400,450,500,550,545,500,650,600,690,670,670,665], "Original": "1000", "Category": "Main" },
-    "Diamonds": { "History": [20, 25, 30, 50,30,45,45,50,55,65,85,75,80,73,70,75,80,85,82,84], "Original": "20", "Category": "Main" },
-    "Netherite": { "History": [100, 110, 105, 128], "Original": "110", "Category": "Main" },
-    "Iron": { "History": [5, 6, 5.5, 7], "Original": "5", "Category": "Main" },
-    "Copper": { "History": [2, 3, 2.5, 2.8], "Original": "2.5", "Category": "Main" },
-    "Coal": { "History": [1, 1.2, 1.1, 1.5], "Original": "1", "Category": "Main" },
-    "Dirt": { "History": [0.000031, 0.000033, 0.00031, 0.00031, 0.00040], "Original": "0.000031", "Category": "Penny Index" },
-    "Wood": { "History": [0.5, 0.6, 0.55, 0.7], "Original": "0.5", "Category": "Penny Index" },
-    "Wheat": { "History": [0.3, 0.4, 0.35, 0.45], "Original": "0.3", "Category": "Penny Index" },
-    "Elytra": { "History": [3000, 3102, 3021, 2991, 2992, 2921, 2900, 2893, 2830, 2810, 2831, 2813, 2840, 2900, 2903, 2912, 2981, 3001], "Original": "2952", "Category": "Trending" }
-    "Gold": { "History": [102, 105, 112], "Original": "100", "Category": "Trending" }
+  "STOCKSMP INDEX": {
+    "History": [300, 450, 500, 300, 450, 400, 450, 500, 550, 545, 500, 650, 600, 690, 670, 670, 665],
+    "Original": 1000,
+    "Category": "Main"
+  },
+  "Diamonds": {
+    "History": [20, 25, 30, 50, 30, 45, 45, 50, 55, 65, 85, 75, 80, 73, 70, 75, 80, 85, 82, 84],
+    "Original": 20,
+    "Category": "Main"
+  },
+  "Netherite": {
+    "History": [100, 110, 105, 128],
+    "Original": 110,
+    "Category": "Main"
+  },
+  "Iron": {
+    "History": [5, 6, 5.5, 7],
+    "Original": 5,
+    "Category": "Main"
+  },
+  "Copper": {
+    "History": [2, 3, 2.5, 2.8],
+    "Original": 2.5,
+    "Category": "Main"
+  },
+  "Coal": {
+    "History": [1, 1.2, 1.1, 1.5],
+    "Original": 1,
+    "Category": "Main"
+  },
+  "Dirt": {
+    "History": [0.000031, 0.000033, 0.00031, 0.00031, 0.0004],
+    "Original": 0.000031,
+    "Category": "Penny Index"
+  },
+  "Wood": {
+    "History": [0.5, 0.6, 0.55, 0.7],
+    "Original": 0.5,
+    "Category": "Penny Index"
+  },
+  "Wheat": {
+    "History": [0.3, 0.4, 0.35, 0.45],
+    "Original": 0.3,
+    "Category": "Penny Index"
+  },
+  "Elytra": {
+    "History": [3000, 3102, 3021, 2991, 2992, 2921, 2900, 2893, 2830, 2810, 2831, 2813, 2840, 2900, 2903, 2912, 2981, 3001],
+    "Original": 2952,
+    "Category": "Trending"
+  },
+  "Gold": {
+    "History": [102, 105, 112],
+    "Original": 100,
+    "Category": "Trending"
+  }
 }
-
-
-
