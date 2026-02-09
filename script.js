@@ -13,8 +13,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Check for updates from the JSON file every 5 seconds
     setInterval(fetchData, 5000); 
     
-    // Run the RANDOM PRICE ALGO every 5 minutes
-    setInterval(simulateMarketMovement, 1000000); 
+
 });
 
 async function fetchData() {
@@ -56,28 +55,6 @@ function processMarketData(data) {
     updateUI();
 }
 
-function simulateMarketMovement() {
-    Object.keys(marketData).forEach(name => {
-        const item = marketData[name];
-        
-        // The Algo: Random wiggle based on volatility
-        const change = (Math.random() * (item.volatility * 2)) - item.volatility;
-        let newPrice = item.price + change;
-
-        // Force price to stay between your set Min and Max
-        if (newPrice < item.min) newPrice = item.min;
-        if (newPrice > item.max) newPrice = item.max;
-
-        item.price = newPrice;
-        item.history.push(newPrice);
-        
-        // Keep the chart from getting too laggy (keep last 50 points)
-        if (item.history.length > 50) item.history.shift();
-        
-        item.candles = formatCandles(item.history);
-    });
-    updateUI();
-}
 
 function formatCandles(historyArray) {
     return historyArray.map((price, index) => {
@@ -203,6 +180,7 @@ async function fetchData() {
         console.error("Error loading prices.json", e);
     }
 }
+
 
 
 
