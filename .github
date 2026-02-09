@@ -1,0 +1,27 @@
+name: Market Bot Update
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'  # Runs every 5 minutes
+  workflow_dispatch:      # Adds a "Run now" button for testing
+
+permissions:
+  contents: write         # Allows the bot to save files
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - name: Run Bot
+        run: python market_bot.py
+      - name: Save Changes
+        run: |
+          git config --global user.name "Market-Bot"
+          git config --global user.email "bot@stocksmp.com"
+          git add prices.json
+          git commit -m "Automated price update" || exit 0
+          git push
