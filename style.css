@@ -83,4 +83,31 @@ body {
 #main-chart {
     min-height: 400px;
     width: 100%;
+
+}
+
+.stock-guide-btn {
+    position: fixed;
+    bottom: 15px;
+    right: 15px; /* Aligned to the bottom right */
+    background-color: #1e222d; /* Dark theme background */
+    color: #94a3b8; /* Subtle text color */
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 10px;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    z-index: 1000; 
+    border: 1px solid #2a2e39; /* Matches terminal borders */
+    transition: all 0.2s ease;
+    font-family: 'Inter', sans-serif;
+}
+
+.stock-guide-btn:hover {
+    background-color: #2962ff; /* Trading blue highlight */
+    color: white;
+    border-color: #2962ff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(41, 98, 255, 0.3);
 }
