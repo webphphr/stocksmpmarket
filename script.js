@@ -190,6 +190,20 @@ function setupCalculator() {
     if(calcInput) calcInput.addEventListener('input', updateCalculator);
 }
 
+async function fetchData() {
+    try {
+        // The "?t=" + Date.now() forces the browser to download a FRESH copy 
+        // instead of using the old "saved" version in its memory.
+        const response = await fetch(`./prices.json?t=${Date.now()}`);
+        if (!response.ok) throw new Error("File not found");
+        
+        const data = await response.json();
+        processMarketData(data);
+    } catch (e) {
+        console.error("Error loading prices.json", e);
+    }
+}
+
 
 
 
