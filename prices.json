@@ -5,10 +5,11 @@
     "Iron": { "History": [5, 6, 5.5, 7], "Original": "5", "Category": "Main" },
     "Copper": { "History": [2, 3, 2.5, 2.8], "Original": "2.5", "Category": "Main" },
     "Coal": { "History": [1, 1.2, 1.1, 1.5], "Original": "1", "Category": "Main" },
-    "Dirt": { "History": [0.1, 0.12, 0.11, 0.15 0.0031], "Original": "0.1", "Category": "Penny Index" },
+    "Dirt": { "History": [0.1, 0.12, 0.11, 0.15, 0.000031], "Original": "0.1", "Category": "Penny Index" },
     "Wood": { "History": [0.5, 0.6, 0.55, 0.7], "Original": "0.5", "Category": "Penny Index" },
     "Wheat": { "History": [0.3, 0.4, 0.35, 0.45], "Original": "0.3", "Category": "Penny Index" }
 
 }
+
 
 
