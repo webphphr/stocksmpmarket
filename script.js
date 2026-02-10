@@ -136,7 +136,7 @@ function initChart() {
     chart = new ApexCharts(document.querySelector("#main-chart"), options);
     chart.render();
 }
-
+/* this function makes the thingy loop*/
 function renderTicker() {
     const ticker = document.getElementById('ticker');
     if (!ticker) return;
@@ -155,4 +155,5 @@ function updateCalculator() {
 function setupCalculator() {
     document.getElementById('calc-qty').addEventListener('input', updateCalculator);
 }
+
 
