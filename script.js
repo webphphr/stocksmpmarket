@@ -138,13 +138,24 @@ function initChart() {
 }
 /* this function makes the thingy loop*/
 function renderTicker() {
-    const ticker = document.getElementById('ticker');
-    if (!ticker) return;
+    const track = document.getElementById('ticker-track');
+    if (!track) return;
+
     const content = Object.keys(marketData).map(k => `
-        <span class="mx-4">${k} <span class="${marketData[k].color}">${marketData[k].price.toFixed(2)}</span></span>
+        <span class="mx-6 whitespace-nowrap">
+            ${k}
+            <span class="${marketData[k].color}">
+                ${marketData[k].price.toFixed(2)}
+            </span>
+        </span>
     `).join("");
-    ticker.innerHTML = `<div class="ticker-content">${content} ${content}</div>`;
+
+    track.innerHTML = `
+        <div class="ticker-content">${content}</div>
+        <div class="ticker-content">${content}</div>
+    `;
 }
+
 
 function updateCalculator() {
     const qty = document.getElementById('calc-qty').value || 0;
@@ -155,5 +166,6 @@ function updateCalculator() {
 function setupCalculator() {
     document.getElementById('calc-qty').addEventListener('input', updateCalculator);
 }
+
 
 
