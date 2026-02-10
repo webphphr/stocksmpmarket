@@ -138,23 +138,28 @@ function initChart() {
 }
 /* this function makes the thingy loop*/
 function renderTicker() {
-    const track = document.getElementById('ticker-track');
-    if (!track) return;
+    const track = document.getElementById("ticker-track");
+    if (!track) {
+        console.error("ticker-track not found");
+        return;
+    }
 
-    const content = Object.keys(marketData).map(k => `
-        <span class="mx-6 whitespace-nowrap">
-            ${k}
-            <span class="${marketData[k].color}">
-                ${marketData[k].price.toFixed(2)}
-            </span>
+    const keys = Object.keys(marketData);
+
+    if (!keys.length) {
+        track.innerHTML = "<span class='ticker-item'>NO DATA</span>";
+        return;
+    }
+
+    const items = keys.map(k => `
+        <span class="ticker-item">
+            ${k}: ${marketData[k].price.toFixed(2)}
         </span>
     `).join("");
 
-    track.innerHTML = `
-        <div class="ticker-content">${content}</div>
-        <div class="ticker-content">${content}</div>
-    `;
+    track.innerHTML = items + items;
 }
+
 
 /* calculator go real time */
 function updateCalculator() {
@@ -166,6 +171,7 @@ function updateCalculator() {
 function setupCalculator() {
     document.getElementById('calc-qty').addEventListener('input', updateCalculator);
 }
+
 
 
 
