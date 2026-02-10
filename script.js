@@ -1,4 +1,4 @@
-const DATA_SOURCE = "./prices.json"; 
+wahts the scrolling thing const DATA_SOURCE = "./prices.json"; 
 
 let marketData = {};
 let currentItem = "";
@@ -136,32 +136,16 @@ function initChart() {
     chart = new ApexCharts(document.querySelector("#main-chart"), options);
     chart.render();
 }
-/* this function makes the thingy loop*/
+
 function renderTicker() {
-    const track = document.getElementById("ticker-track");
-    if (!track) {
-        console.error("ticker-track not found");
-        return;
-    }
-
-    const keys = Object.keys(marketData);
-
-    if (!keys.length) {
-        track.innerHTML = "<span class='ticker-item'>NO DATA</span>";
-        return;
-    }
-
-    const items = keys.map(k => `
-        <span class="ticker-item">
-            ${k}: ${marketData[k].price.toFixed(2)}
-        </span>
+    const ticker = document.getElementById('ticker');
+    if (!ticker) return;
+    const content = Object.keys(marketData).map(k => `
+        <span class="mx-4">${k} <span class="${marketData[k].color}">${marketData[k].price.toFixed(2)}</span></span>
     `).join("");
-
-    track.innerHTML = items + items;
+    ticker.innerHTML = `<div class="ticker-content">${content} ${content}</div>`;
 }
 
-
-/* calculator go real time */
 function updateCalculator() {
     const qty = document.getElementById('calc-qty').value || 0;
     const price = marketData[currentItem]?.price || 0;
@@ -171,8 +155,4 @@ function updateCalculator() {
 function setupCalculator() {
     document.getElementById('calc-qty').addEventListener('input', updateCalculator);
 }
-
-
-
-
 
