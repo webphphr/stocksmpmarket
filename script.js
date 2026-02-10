@@ -1,4 +1,4 @@
-wahts the scrolling thing const DATA_SOURCE = "./prices.json"; 
+const DATA_SOURCE = "./prices.json"; 
 
 let marketData = {};
 let currentItem = "";
@@ -155,4 +155,5 @@ function updateCalculator() {
 function setupCalculator() {
     document.getElementById('calc-qty').addEventListener('input', updateCalculator);
 }
+
 
