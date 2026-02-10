@@ -156,7 +156,7 @@ function renderTicker() {
     `;
 }
 
-
+/* calculator go real time */
 function updateCalculator() {
     const qty = document.getElementById('calc-qty').value || 0;
     const price = marketData[currentItem]?.price || 0;
@@ -166,6 +166,7 @@ function updateCalculator() {
 function setupCalculator() {
     document.getElementById('calc-qty').addEventListener('input', updateCalculator);
 }
+
 
 
 
