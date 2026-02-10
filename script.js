@@ -87,7 +87,7 @@ function renderWatchlist() {
     list.innerHTML = "";
 
     // Categories in display order
-    const categories = ["Trending", "Main", "Penny Index", "M3ME CO1N$"];
+    const categories = ["Trending", "Main", "Penny Index", "MEME COINS"];
 
     categories.forEach(cat => {
         // Add Sticky Category Header
@@ -155,6 +155,7 @@ function updateCalculator() {
 function setupCalculator() {
     document.getElementById('calc-qty').addEventListener('input', updateCalculator);
 }
+
 
 
 
