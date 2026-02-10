@@ -14,18 +14,43 @@ body {
     display: none !important;
 }
 
-/* TICKER ANIMATION */
-.ticker-content { 
-    display: inline-flex; 
-    white-space: nowrap;
-    animation: scroll-ticker 40s linear infinite; 
-    gap: 4rem; 
+/* ===== INFINITE TICKER ===== */
+
+.ticker-wrapper {
+  width: 100%;
+  overflow: hidden;
 }
 
-@keyframes scroll-ticker { 
-    0% { transform: translateX(0); } 
-    100% { transform: translateX(-50%); } 
+.ticker-track {
+  display: flex;
+  width: max-content;
+  animation: ticker-scroll 30s linear infinite;
 }
+
+.ticker-content {
+  display: flex;
+  white-space: nowrap;
+}
+
+.ticker-content span {
+  flex-shrink: 0;
+  margin-right: 4rem;
+}
+
+@keyframes ticker-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Optional: pause on hover */
+.ticker-wrapper:hover .ticker-track {
+  animation-play-state: paused;
+}
+
 
 /* WATCHLIST / SIDEBAR */
 .watchlist-item { 
@@ -217,3 +242,4 @@ body {
     font-weight: bold;
     margin-right: 4px;
 }
+
