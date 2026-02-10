@@ -376,5 +376,56 @@
     ],
     "Original": 38150,
     "Category": "Trending"
+  },
+  {
+  "Obsidian": {
+    "History": [45, 48, 52, 49, 55, 60, 58, 63, 61, 66, 70, 68],
+    "Original": 45,
+    "Category": "Main"
+  },
+  "Emerald": {
+    "History": [120, 135, 128, 140, 155, 150, 162, 158, 170, 165, 178, 185, 180],
+    "Original": 120,
+    "Category": "Main"
+  },
+  "Redstone": {
+    "History": [3.2, 3.4, 3.1, 3.6, 3.9, 3.7, 4.1, 4.4, 4.2, 4.6],
+    "Original": 3.2,
+    "Category": "Penny Index"
+  },
+  "Quartz": {
+    "History": [8, 7.5, 7.8, 8.4, 8.1, 8.9, 9.3, 9.1, 9.7, 10.2, 9.8],
+    "Original": 8,
+    "Category": "Penny Index"
+  },
+  "EnderPearl": {
+    "History": [220, 245, 238, 260, 255, 275, 290, 285, 305, 298, 315, 330],
+    "Original": 220,
+    "Category": "Trending"
+  },
+  "WitherStar": {
+    "History": [15000, 16200, 15500, 17000, 16800, 18200, 19500, 18800, 20500, 21200, 19800],
+    "Original": 15000,
+    "Category": "Trending"
+  },
+  "SlimeBall": {
+    "History": [0.12, 0.15, 0.14, 0.18, 0.22, 0.19, 0.25, 0.3, 0.27, 0.21, 0.24],
+    "Original": 0.12,
+    "Category": "Penny Index"
+  },
+  "Beacon": {
+    "History": [4200, 4500, 4380, 4700, 4650, 4900, 5100, 5050, 5300, 5450, 5600, 5480],
+    "Original": 4200,
+    "Category": "Main"
+  },
+  "PiglinCoin": {
+    "History": [1.1, 1.3, 0.95, 1.4, 1.2, 1.6, 1.8, 1.55, 2.1, 1.9, 2.3, 2],
+    "Original": 1.1,
+    "Category": "MEME COINS"
+  },
+  "VoidFragment": {
+    "History": [780, 820, 790, 860, 845, 910, 940, 920, 980, 1010, 995, 1035, 1080],
+    "Original": 780,
+    "Category": "Trending"
   }
 }
