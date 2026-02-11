@@ -1,50 +1,57 @@
-const DATA_SOURCE = "./prices.json"; 
+// GitHub Friendly Data Source
+const DATA_SOURCE = "prices.json"; 
 
 let marketData = {};
 let currentItem = "";
 let chart;
 let lastPriceHash = ""; 
-let searchTerm = ""; // Track search input
+let searchTerm = ""; // Tracks your search bar input
 
 document.addEventListener('DOMContentLoaded', async () => {
     initChart();
     await fetchData();
     setupCalculator();
-    setupSearch(); // Initialize search
-    setInterval(fetchData, 5000); 
-});
-
-function setupSearch() {
+    
+    // Search Bar Logic
     const searchInput = document.getElementById('watchlist-search');
     if (searchInput) {
         searchInput.addEventListener('input', (e) => {
             searchTerm = e.target.value.toLowerCase();
-            renderWatchlist(); // Filter list in real-time
+            renderWatchlist();
         });
     }
-}
+
+    // Auto-refresh every 5 seconds
+    setInterval(fetchData, 5000); 
+});
 
 async function fetchData() {
     try {
-        const response = await fetch(`${DATA_SOURCE}?t=${new Date().getTime()}`);
+        // Fetch with a timestamp to prevent GitHub from serving old cached data
+        const response = await fetch(`${DATA_SOURCE}?t=${Date.now()}`);
         if (!response.ok) throw new Error("File not found");
+        
         const rawText = await response.text();
         if (rawText === lastPriceHash) return;
         lastPriceHash = rawText;
+
         processMarketData(JSON.parse(rawText));
     } catch (e) {
-        console.error("Error loading prices.json", e);
+        console.error("Error loading prices.json:", e);
+        // Helps debug if GitHub can't find the file
+        document.getElementById('market-status').innerText = "● OFFLINE";
     }
 }
 
 function processMarketData(data) {
     marketData = {};
+
     for (const [name, info] of Object.entries(data)) {
         const history = info.History || [0];
         const currentPrice = history[history.length - 1];
         
-        // Logic for 10-candle trend:
-        // Compare current price to the price 10 steps ago (or the first price if history < 10)
+        // --- 10-CANDLE TREND LOGIC ---
+        // Look back 10 candles. If history is shorter than 10, use the very first entry.
         const lookbackIndex = Math.max(0, history.length - 11); 
         const pastPrice = history[lookbackIndex];
         
@@ -59,6 +66,7 @@ function processMarketData(data) {
             candles: formatCandles(history)
         };
     }
+
     if (!currentItem) currentItem = Object.keys(marketData)[0];
     updateUI();
 }
@@ -69,12 +77,12 @@ function updateUI() {
 
     document.getElementById('active-item-name').innerText = currentItem;
     document.getElementById('active-item-price').innerText = item.price.toFixed(2);
-    document.getElementById('active-item-trend').innerText = item.trend + " | Data from 10 candles";
+    document.getElementById('active-item-trend').innerText = item.trend + " (Last 10)";
     document.getElementById('active-item-trend').className = `text-sm font-mono mt-1 ${item.color}`;
 
     if (chart) {
         chart.updateSeries([{ data: item.candles }]);
-        // Force resize to fix potential gaps
+        // Triggers a resize to ensure the chart fills the gap correctly
         window.dispatchEvent(new Event('resize'));
     }
     
@@ -87,11 +95,14 @@ function renderWatchlist() {
     const list = document.getElementById('watchlist');
     if (!list) return;
     list.innerHTML = "";
+
     const categories = ["Trending", "Main", "Penny Index", "MEME COINS"];
 
     categories.forEach(cat => {
+        // Filter by Category AND Search Term
         const filteredNames = Object.keys(marketData).filter(name => 
-            marketData[name].category === cat && name.toLowerCase().includes(searchTerm)
+            marketData[name].category === cat && 
+            name.toLowerCase().includes(searchTerm)
         );
 
         if (filteredNames.length > 0) {
@@ -103,7 +114,7 @@ function renderWatchlist() {
             filteredNames.forEach(name => {
                 const item = marketData[name];
                 const div = document.createElement('div');
-                div.className = `watchlist-item p-4 flex justify-between cursor-pointer border-b border-[#1e222d] ${name === currentItem ? 'active bg-[#1e222d] border-l-4 border-l-blue-500' : ''}`;
+                div.className = `watchlist-item p-4 flex justify-between cursor-pointer ${name === currentItem ? 'active' : ''}`;
                 div.onclick = () => { currentItem = name; updateUI(); };
                 div.innerHTML = `
                     <div class="flex flex-col">
@@ -122,8 +133,11 @@ function initChart() {
     const options = {
         series: [{ data: [] }],
         chart: { 
-            type: 'candlestick', height: '100%', 
-            toolbar: { show: false }, background: 'transparent', foreColor: '#676d7c'
+            type: 'candlestick', 
+            height: '100%', 
+            toolbar: { show: false }, 
+            background: 'transparent', 
+            foreColor: '#676d7c'
         },
         xaxis: { type: 'datetime' },
         plotOptions: { candlestick: { colors: { upward: '#089981', downward: '#f23645' } } },
@@ -145,6 +159,7 @@ function formatCandles(historyArray) {
 
 function renderTicker() {
     const ticker = document.getElementById('ticker');
+    if (!ticker) return;
     const content = Object.keys(marketData).map(k => `
         <span class="mx-4">${k} <span class="${marketData[k].color}">${marketData[k].price.toFixed(2)}</span></span>
     `).join("");
@@ -152,7 +167,10 @@ function renderTicker() {
 }
 
 function setupCalculator() {
-    document.getElementById('calc-qty').addEventListener('input', updateCalculator);
+    const qtyInput = document.getElementById('calc-qty');
+    if (qtyInput) {
+        qtyInput.addEventListener('input', updateCalculator);
+    }
 }
 
 function updateCalculator() {
@@ -161,8 +179,8 @@ function updateCalculator() {
     document.getElementById('calc-total').innerText = (qty * price).toFixed(2);
 }
 
+// Global function for the IP/Port copy buttons
 function copyText(text) {
     navigator.clipboard.writeText(text);
     alert("Copied: " + text);
 }
-
