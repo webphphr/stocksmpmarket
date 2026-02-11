@@ -85,36 +85,27 @@ body {
 
 .label { color: #2962ff; font-weight: bold; margin-right: 4px; }
 
-/* Custom Scrollbar for Chrome, Safari, and Edge */
+/* Removes scrollbar visibility for Chrome, Safari, and Edge */
 ::-webkit-scrollbar {
-    width: 6px;
-    height: 6px;
+    width: 0px;
+    background: transparent; /* make scrollbar invisible */
 }
 
-::-webkit-scrollbar-track {
-    background: #0d1117; /* Matches your background */
+/* Optional: hide horizontal scrollbar too */
+::-webkit-scrollbar-horizontal {
+    height: 0px;
 }
 
-::-webkit-scrollbar-thumb {
-    background: #2a2e39; /* Matches your borders */
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #2962ff; /* Turns blue when you hover over it */
-}
-
-/* Firefox Support */
+/* Removes scrollbar visibility for Firefox */
 * {
-    scrollbar-width: thin;
-    scrollbar-color: #2a2e39 #0d1117;
+    scrollbar-width: none;
 }
 
-/* Ensure the layout doesn't overflow weirdly */
-body {
-    overflow: hidden; /* Prevents the whole page from having a white bar */
-}
-
+/* Ensures you can still scroll the watchlist container */
 #watchlist {
-    overflow-y: auto; /* Only allow scrolling in the sidebar */
+    -ms-overflow-style: none; /* IE and Edge */
+    overflow-y: auto;
 }
+
+
+
