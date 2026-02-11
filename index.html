@@ -1,65 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>STOCK SMP Exchange</title>
-	<script src="https://cdn.tailwindcss.com"></script>
-	<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-	<link rel="stylesheet" href="style.css"> </head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STOCK SMP Exchange</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="flex flex-col h-screen overflow-hidden bg-[#0d1117]">
+    <div class="ticker-wrapper bg-[#1e222d] border-b border-[#2a2e39] py-2 overflow-hidden shrink-0">
+        <div class="ticker-content font-mono text-[10px] uppercase tracking-widest" id="ticker"></div>
+    </div>
 
-<body class="flex flex-col min-h-screen">
-	<div class="ticker-wrapper bg-[#1e222d] border-b border-[#2a2e39] py-2 overflow-hidden">
-		<div class="ticker-content font-mono text-[10px] uppercase tracking-widest" id="ticker"></div>
-	</div>
-	<nav class="flex justify-between items-center px-6 py-3 border-b border-[#2a2e39] bg-[#131722]">
-		<div class="flex items-center gap-6">
-			<h1 class="text-xl font-bold text-white tracking-tighter cursor-pointer" onclick="location.reload()">STOCK<span class="text-blue-500">SMP</span></h1>
-			<div class="hidden md:flex gap-4 text-xs font-semibold uppercase text-slate-500"> <a href="#" class="text-blue-500 border-b border-blue-500">Market</a> </div>
-		</div>
-		<div class="flex items-center gap-4 text-xs"> <span id="market-status" class="text-green-500 bg-green-500/10 px-2 py-1 rounded border border-green-500/20">● LIVE MARKET</span> </div>
-	</nav>
-	<main class="flex-1 grid grid-cols-1 lg:grid-cols-4">
-		<aside class="lg:col-span-1 border-r border-[#2a2e39] bg-[#131722] flex flex-col h-[300px] lg:h-auto">
-			<div class="p-4 border-b border-[#2a2e39] text-[10px] font-bold text-slate-500 uppercase tracking-widest">Symbol Watchlist</div>
-			<div class="flex-1 overflow-y-auto" id="watchlist"></div>
-		</aside>
-		<section class="lg:col-span-2 flex flex-col p-6 space-y-4 border-b lg:border-b-0 border-[#2a2e39]">
-			<div class="flex justify-between items-start">
-				<div>
-					<h2 class="text-2xl font-bold text-white" id="active-item-name">Loading...</h2>
-					<p class="text-xs text-slate-500 font-mono" id="active-item-symbol">--- / DMD</p>
-				</div>
-				<div class="text-right">
-					<p class="text-3xl font-mono text-white leading-none" id="active-item-price">0.00</p>
-					<p class="text-sm font-mono mt-1" id="active-item-trend">0.00%</p>
-				</div>
-			</div>
-			<div id="main-chart" class="flex-1 w-full min-h-[400px]"></div>
-		</section>
-		<aside class="lg:col-span-1 border-l border-[#2a2e39] p-6 bg-[#131722] space-y-6">
-			<h3 class="text-xs font-bold text-slate-500 uppercase tracking-widest">Price Calculator</h3>
-			<div class="space-y-4">
-				<div class="p-4 rounded-md bg-[#1e222d] border border-[#2a2e39]">
-					<label class="text-[10px] text-slate-500 block mb-1 uppercase tracking-widest">Quantity</label>
-					<input type="number" id="calc-qty" value="1" min="1" class="w-full bg-transparent border-none text-2xl font-mono text-white focus:outline-none"> </div>
-				<div class="p-4 rounded-md bg-[#1e222d] border border-blue-500/30 shadow-lg shadow-blue-500/5">
-					<label class="text-[10px] text-blue-400 block mb-1 uppercase tracking-widest">Estimated Cost</label>
-					<div class="flex items-center"> <span id="calc-total" class="text-2xl font-mono text-white">0.00</span> <span class="ml-auto text-blue-400 font-bold">💎</span> </div>
-				</div>
-			</div>
-		</aside>
-		<div class="utility-panel"> <a href="https://docs.google.com/document/d/1TRIe8MQcQDppI86FH7r8XVm8FBksmyVlRTf0Pjn1OYg/edit?usp=sharing" target="_blank" class="stock-guide-btn"> STOCK GUIDE </a>
-			<div class="server-info">
-				<div class="info-row" onclick="copyText('StockSMP.aternos.me')"> <span class="label">IP:</span> StockSMP.exaroton.me </div>
-				<div class="info-row" onclick="copyText('44508')"> <span class="label">Port:</span> 30659 </div>
-			</div>
-		</div>
-		<script src="script.js"></script>
-	</main>
-	<script src="script.js"></script>
+    <nav class="flex justify-between items-center px-6 py-3 border-b border-[#2a2e39] bg-[#131722] shrink-0">
+        <div class="flex items-center gap-6">
+            <h1 class="text-xl font-bold text-white tracking-tighter cursor-pointer" onclick="location.reload()">STOCK<span class="text-blue-500">SMP</span></h1>
+            <div class="hidden md:flex gap-4 text-xs font-semibold uppercase text-slate-500"> 
+                <a href="#" class="text-blue-500 border-b border-blue-500">Market</a> 
+            </div>
+        </div>
+        <div class="flex items-center gap-4 text-xs"> 
+            <span id="market-status" class="text-green-500 bg-green-500/10 px-2 py-1 rounded border border-green-500/20">● LIVE MARKET</span> 
+        </div>
+    </nav>
+
+    <main class="flex-1 grid grid-cols-1 lg:grid-cols-4 overflow-hidden">
+        <aside class="lg:col-span-1 border-r border-[#2a2e39] bg-[#131722] flex flex-col min-h-0 order-2 lg:order-1">
+            <div class="p-4 border-b border-[#2a2e39] space-y-3">
+                <div class="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Symbol Watchlist</div>
+                <input type="text" id="watchlist-search" placeholder="Search symbols..." 
+                    class="w-full bg-[#1e222d] border border-[#2a2e39] rounded px-3 py-2 text-xs text-white focus:outline-none focus:border-blue-500 transition-colors">
+            </div>
+            <div class="flex-1 overflow-y-auto custom-scrollbar" id="watchlist"></div>
+        </aside>
+
+        <section class="lg:col-span-2 flex flex-col p-6 border-b lg:border-b-0 border-[#2a2e39] min-h-0 order-1 lg:order-2">
+            <div class="flex justify-between items-start mb-4 shrink-0">
+                <div>
+                    <h2 class="text-2xl font-bold text-white" id="active-item-name">Loading...</h2>
+                    <p class="text-xs text-slate-500 font-mono" id="active-item-symbol">--- / DMD</p>
+                </div>
+                <div class="text-right">
+                    <p class="text-3xl font-mono text-white leading-none" id="active-item-price">0.00</p>
+                    <p class="text-sm font-mono mt-1" id="active-item-trend">0.00%</p>
+                </div>
+            </div>
+            <div id="main-chart" class="flex-1 w-full"></div>
+        </section>
+
+        <aside class="hidden lg:flex lg:col-span-1 border-l border-[#2a2e39] p-6 bg-[#131722] flex-col space-y-6 order-3">
+            <h3 class="text-xs font-bold text-slate-500 uppercase tracking-widest">Price Calculator</h3>
+            <div class="space-y-4">
+                <div class="p-4 rounded-md bg-[#1e222d] border border-[#2a2e39]">
+                    <label class="text-[10px] text-slate-500 block mb-1 uppercase tracking-widest">Quantity</label>
+                    <input type="number" id="calc-qty" value="1" min="1" class="w-full bg-transparent border-none text-2xl font-mono text-white focus:outline-none"> 
+                </div>
+                <div class="p-4 rounded-md bg-[#1e222d] border border-blue-500/30 shadow-lg shadow-blue-500/5">
+                    <label class="text-[10px] text-blue-400 block mb-1 uppercase tracking-widest">Estimated Cost</label>
+                    <div class="flex items-center"> 
+                        <span id="calc-total" class="text-2xl font-mono text-white">0.00</span> 
+                        <span class="ml-auto text-blue-400 font-bold">💎</span> 
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <div class="utility-panel"> 
+        <a href="https://docs.google.com/document/d/1TRIe8MQcQDppI86FH7r8XVm8FBksmyVlRTf0Pjn1OYg/edit?usp=sharing" target="_blank" class="stock-guide-btn"> STOCK GUIDE </a>
+        <div class="server-info">
+            <div class="info-row" onclick="copyText('StockSMP.exaroton.me')"> <span class="label">IP:</span> StockSMP.exaroton.me </div>
+            <div class="info-row" onclick="copyText('30659')"> <span class="label">Port:</span> 30659 </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
-
 </html>
-
