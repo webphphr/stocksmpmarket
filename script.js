@@ -1,4 +1,4 @@
-const DATA_SOURCE = "coins/prices.json"; 
+const DATA_SOURCE = "./prices.json"; 
 
 let marketData = {};
 let currentItem = "";
