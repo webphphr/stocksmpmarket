@@ -183,3 +183,28 @@ function copyText(text) {
     navigator.clipboard.writeText(text);
     alert("Copied: " + text);
 }
+
+// ... (All your previous logic: DATA_SOURCE, processMarketData, 10-candle trend)
+
+function updateUI() {
+    const item = marketData[currentItem];
+    if (!item) return;
+
+    document.getElementById('active-item-name').innerText = currentItem;
+    document.getElementById('active-item-price').innerText = item.price.toFixed(2);
+    document.getElementById('active-item-trend').innerText = item.trend + " (10c)";
+    document.getElementById('active-item-trend').className = `text-sm font-mono mt-1 ${item.color}`;
+
+    if (chart) {
+        chart.updateSeries([{ data: item.candles }]);
+        
+        // CRITICAL FOR MOBILE:
+        // Force the chart to re-render to the new width of the phone screen
+        setTimeout(() => {
+            window.dispatchEvent(new Event('resize'));
+        }, 100);
+    }
+    
+    renderWatchlist();
+    renderTicker();
+}
