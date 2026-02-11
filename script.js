@@ -1,17 +1,18 @@
+// GitHub Friendly Data Source
 const DATA_SOURCE = "prices.json"; 
 
 let marketData = {};
 let currentItem = "";
 let chart;
 let lastPriceHash = ""; 
-let searchTerm = "";
+let searchTerm = ""; // Tracks your search bar input
 
 document.addEventListener('DOMContentLoaded', async () => {
     initChart();
     await fetchData();
     setupCalculator();
     
-    // Search Filter Logic
+    // Search Bar Logic
     const searchInput = document.getElementById('watchlist-search');
     if (searchInput) {
         searchInput.addEventListener('input', (e) => {
@@ -20,11 +21,13 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
     }
 
+    // Auto-refresh every 5 seconds
     setInterval(fetchData, 5000); 
 });
 
 async function fetchData() {
     try {
+        // Fetch with a timestamp to prevent GitHub from serving old cached data
         const response = await fetch(`${DATA_SOURCE}?t=${Date.now()}`);
         if (!response.ok) throw new Error("File not found");
         
@@ -34,7 +37,7 @@ async function fetchData() {
 
         processMarketData(JSON.parse(rawText));
     } catch (e) {
-        console.error("GitHub Fetch Error:", e);
+        console.error("Error loading prices.json:", e);
         const status = document.getElementById('market-status');
         if (status) status.innerText = "● OFFLINE";
     }
@@ -42,13 +45,16 @@ async function fetchData() {
 
 function processMarketData(data) {
     marketData = {};
+
     for (const [name, info] of Object.entries(data)) {
         const history = info.History || [0];
         const currentPrice = history[history.length - 1];
         
-        // 10-Candle Trend Calculation
+        // --- 10-CANDLE TREND LOGIC ---
+        // Compare current price to the price 10 entries ago
         const lookbackIndex = Math.max(0, history.length - 11); 
         const pastPrice = history[lookbackIndex];
+        
         const diff = currentPrice - pastPrice;
         const percent = pastPrice !== 0 ? ((diff / pastPrice) * 100).toFixed(2) : 0;
 
@@ -60,6 +66,7 @@ function processMarketData(data) {
             candles: formatCandles(history)
         };
     }
+
     if (!currentItem) currentItem = Object.keys(marketData)[0];
     updateUI();
 }
@@ -70,13 +77,15 @@ function updateUI() {
 
     document.getElementById('active-item-name').innerText = currentItem;
     document.getElementById('active-item-price').innerText = item.price.toFixed(2);
-    document.getElementById('active-item-trend').innerText = item.trend + " (Last 10)";
+    document.getElementById('active-item-trend').innerText = item.trend + " (Recent)";
     document.getElementById('active-item-trend').className = `text-sm font-mono mt-1 ${item.color}`;
 
     if (chart) {
         chart.updateSeries([{ data: item.candles }]);
+        // Ensures chart stretches to fill any gaps
         window.dispatchEvent(new Event('resize'));
     }
+    
     renderWatchlist();
     renderTicker();
     updateCalculator();
@@ -88,18 +97,20 @@ function renderWatchlist() {
     list.innerHTML = "";
 
     const categories = ["Trending", "Main", "Penny Index", "MEME COINS"];
+
     categories.forEach(cat => {
-        const filtered = Object.keys(marketData).filter(name => 
-            marketData[name].category === cat && name.toLowerCase().includes(searchTerm)
+        const filteredNames = Object.keys(marketData).filter(name => 
+            marketData[name].category === cat && 
+            name.toLowerCase().includes(searchTerm)
         );
 
-        if (filtered.length > 0) {
+        if (filteredNames.length > 0) {
             const header = document.createElement('div');
             header.className = "p-2 bg-[#1e222d] text-[10px] font-bold text-blue-400 uppercase tracking-widest sticky top-0 border-y border-[#2a2e39] z-10";
             header.innerText = cat;
             list.appendChild(header);
 
-            filtered.forEach(name => {
+            filteredNames.forEach(name => {
                 const item = marketData[name];
                 const div = document.createElement('div');
                 div.className = `watchlist-item p-4 flex justify-between cursor-pointer ${name === currentItem ? 'active' : ''}`;
@@ -121,8 +132,11 @@ function initChart() {
     const options = {
         series: [{ data: [] }],
         chart: { 
-            type: 'candlestick', height: '100%', toolbar: { show: false }, 
-            background: 'transparent', foreColor: '#676d7c'
+            type: 'candlestick', 
+            height: '100%', 
+            toolbar: { show: false }, 
+            background: 'transparent', 
+            foreColor: '#676d7c'
         },
         xaxis: { type: 'datetime' },
         plotOptions: { candlestick: { colors: { upward: '#089981', downward: '#f23645' } } },
@@ -132,11 +146,14 @@ function initChart() {
     chart.render();
 }
 
-function formatCandles(history) {
-    return history.map((price, i) => ({
-        x: new Date(Date.now() - (history.length - i) * 3600000),
-        y: [i > 0 ? history[i-1] : price, price * 1.01, price * 0.99, price]
-    }));
+function formatCandles(historyArray) {
+    return historyArray.map((price, index) => {
+        const prevPrice = index > 0 ? historyArray[index - 1] : price;
+        return {
+            x: new Date(Date.now() - (historyArray.length - index) * 3600000),
+            y: [prevPrice, Math.max(prevPrice, price) * 1.01, Math.min(prevPrice, price) * 0.99, price]
+        };
+    });
 }
 
 function renderTicker() {
@@ -149,14 +166,17 @@ function renderTicker() {
 }
 
 function setupCalculator() {
-    const input = document.getElementById('calc-qty');
-    if (input) input.addEventListener('input', updateCalculator);
+    const qtyInput = document.getElementById('calc-qty');
+    if (qtyInput) {
+        qtyInput.addEventListener('input', updateCalculator);
+    }
 }
 
 function updateCalculator() {
     const qty = document.getElementById('calc-qty').value || 0;
     const price = marketData[currentItem]?.price || 0;
-    document.getElementById('calc-total').innerText = (qty * price).toFixed(2);
+    const total = (qty * price).toFixed(2);
+    document.getElementById('calc-total').innerText = total;
 }
 
 function copyText(text) {
