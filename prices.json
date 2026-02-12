@@ -1630,5 +1630,12 @@
     ],
     "Original": 780,
     "Category": "Trending"
+  },
+    "Totem of Undying": {
+    "History": [
+      500000
+    ],
+    "Original": 500000,
+    "Category": "Trending"
   }
 }
