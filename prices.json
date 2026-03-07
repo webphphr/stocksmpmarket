@@ -4,7 +4,8 @@
     "History": [
       1153846,
       1167689.637867,
-      1199100.018743
+      1199100.018743,
+      1206191.48243
     ],
     "Category": "Main",
     "_dipStreak": 0
@@ -14,67 +15,74 @@
     "History": [
       576923,
       586603.840472,
-      577133.984466
+      577133.984466,
+      573797.590219
     ],
     "Category": "Main",
-    "_dipStreak": 0
+    "_dipStreak": 1
   },
   "Netherite": {
     "Original": 1038462,
     "History": [
       1038462,
       1033458.682036,
-      1044313.616412
+      1044313.616412,
+      1041745.445797
     ],
     "Category": "Main",
-    "_dipStreak": 1
+    "_dipStreak": 0
   },
   "Iron": {
     "Original": 92308,
     "History": [
       92308,
       91265.288215,
-      90336.327053
+      90336.327053,
+      90545.700991
     ],
     "Category": "Main",
-    "_dipStreak": 1
+    "_dipStreak": 2
   },
   "Copper": {
     "Original": 46154,
     "History": [
       46154,
       45487.132388,
-      46300.570484
+      46300.570484,
+      46210.32551
     ],
     "Category": "Main",
-    "_dipStreak": 1
+    "_dipStreak": 0
   },
   "Coal": {
     "Original": 28846,
     "History": [
       28846,
       29384.564516,
-      28813.595176
+      28813.595176,
+      29621.021597
     ],
     "Category": "Main",
-    "_dipStreak": 0
+    "_dipStreak": 1
   },
   "Obsidian": {
     "Original": 103846,
     "History": [
       103846,
       101651.459056,
-      103066.155908
+      103066.155908,
+      101150.842461
     ],
     "Category": "Main",
-    "_dipStreak": 1
+    "_dipStreak": 0
   },
   "Emerald": {
     "Original": 403846,
     "History": [
       403846,
       410999.268745,
-      418088.062141
+      418088.062141,
+      422284.727117
     ],
     "Category": "Main",
     "_dipStreak": 0
@@ -84,67 +92,74 @@
     "History": [
       3461538,
       3383149.904297,
-      3329087.166812
+      3329087.166812,
+      3308014.755169
     ],
     "Category": "Main",
-    "_dipStreak": 1
+    "_dipStreak": 2
   },
   "G4MBLE": {
     "Original": 115385,
     "History": [
       115385,
       112420.835113,
-      113539.332493
+      113539.332493,
+      115903.405581
     ],
     "Category": "Main",
-    "_dipStreak": 1
+    "_dipStreak": 0
   },
   "Dirt": {
     "Original": 15000,
     "History": [
       15000,
       15389.620052,
-      14956.979412
+      14956.979412,
+      15285.649048
     ],
     "Category": "Penny Index",
-    "_dipStreak": 0
+    "_dipStreak": 1
   },
   "Wood": {
     "Original": 30000,
     "History": [
       30000,
       29397.369966,
-      29152.014958
+      29152.014958,
+      28560.787978
     ],
     "Category": "Penny Index",
-    "_dipStreak": 1
+    "_dipStreak": 2
   },
   "Wheat": {
     "Original": 20769,
     "History": [
       20769,
       21283.294574,
-      20779.618164
+      20779.618164,
+      21252.764236
     ],
     "Category": "Penny Index",
-    "_dipStreak": 0
+    "_dipStreak": 1
   },
   "Redstone": {
     "Original": 34615,
     "History": [
       34615,
       34275.610211,
-      35167.924684
+      35167.924684,
+      36153.716934
     ],
     "Category": "Penny Index",
-    "_dipStreak": 1
+    "_dipStreak": 0
   },
   "Quartz": {
     "Original": 51923,
     "History": [
       51923,
       53470.938405,
-      53680.553234
+      53680.553234,
+      54900.915967
     ],
     "Category": "Penny Index",
     "_dipStreak": 0
@@ -154,7 +169,8 @@
     "History": [
       17308,
       17411.084925,
-      17533.229151
+      17533.229151,
+      17152.335058
     ],
     "Category": "Penny Index",
     "_dipStreak": 0
@@ -164,7 +180,8 @@
     "History": [
       2884615,
       2902321.033892,
-      2975953.797788
+      2975953.797788,
+      2954636.23057
     ],
     "Category": "Trending",
     "_dipStreak": 0
@@ -174,17 +191,19 @@
     "History": [
       138462,
       136544.50833,
-      136860.351464
+      136860.351464,
+      133019.770171
     ],
     "Category": "Trending",
-    "_dipStreak": 1
+    "_dipStreak": 0
   },
   "Mace": {
     "Original": 4038462,
     "History": [
       4038462,
       4062286.114682,
-      4157581.711234
+      4157581.711234,
+      4145847.413298
     ],
     "Category": "Trending",
     "_dipStreak": 0
@@ -194,27 +213,30 @@
     "History": [
       230769,
       224908.123438,
-      218815.161603
+      218815.161603,
+      213399.915259
     ],
     "Category": "Trending",
-    "_dipStreak": 1
+    "_dipStreak": 2
   },
   "WitherStar": {
     "Original": 5769231,
     "History": [
       5769231,
       5645472.772254,
-      5789909.515889
+      5789909.515889,
+      5887009.751976
     ],
     "Category": "Trending",
-    "_dipStreak": 1
+    "_dipStreak": 0
   },
   "VoidFragment": {
     "Original": 692308,
     "History": [
       692308,
       702584.894238,
-      719639.265545
+      719639.265545,
+      728508.407404
     ],
     "Category": "Trending",
     "_dipStreak": 0
@@ -224,57 +246,63 @@
     "History": [
       8076923,
       8132883.822376,
-      8062759.635345
+      8062759.635345,
+      8000387.569414
     ],
     "Category": "Trending",
-    "_dipStreak": 0
+    "_dipStreak": 1
   },
   "SeanCoin": {
     "Original": 57692,
     "History": [
       57692,
       59380.229293,
-      58256.142432
+      58256.142432,
+      59895.128688
     ],
     "Category": "MEME COINS",
-    "_dipStreak": 0
+    "_dipStreak": 1
   },
   "PiglinCoin": {
     "Original": 69231,
     "History": [
       69231,
       69843.61424,
-      68979.154612
+      68979.154612,
+      67591.659276
     ],
     "Category": "MEME COINS",
-    "_dipStreak": 0
+    "_dipStreak": 1
   },
   "CreeperCoin": {
     "Original": 48462,
     "History": [
       48462,
       48619.06151,
-      47167.600463
+      47167.600463,
+      47149.64197
     ],
     "Category": "MEME COINS",
-    "_dipStreak": 0
+    "_dipStreak": 1
   },
   "EnderCoin": {
     "Original": 63462,
     "History": [
       63462,
       61674.267657,
-      63240.880769
+      63240.880769,
+      64891.086658
     ],
     "Category": "MEME COINS",
-    "_dipStreak": 1
+    "_dipStreak": 0
   },
   "SteveCoin": {
     "Original": 42692,
     "History": [
       42692,
       43504.241173,
-      43709.851479
+      43709.851479,
+      43302.976898
     ],
     "Category": "MEME COINS",
     "_dipStreak": 0
@@ -284,17 +312,19 @@
     "History": [
       70385,
       71741.088332,
-      70467.700077
+      70467.700077,
+      70565.800387
     ],
     "Category": "MEME COINS",
-    "_dipStreak": 0
+    "_dipStreak": 1
   },
   "PigCoin": {
     "Original": 32308,
     "History": [
       32308,
       33006.429551,
-      33863.835567
+      33863.835567,
+      33456.225428
     ],
     "Category": "MEME COINS",
     "_dipStreak": 0
@@ -304,17 +334,19 @@
     "History": [
       27692,
       27653.308446,
-      27741.577354
+      27741.577354,
+      27204.116968
     ],
     "Category": "MEME COINS",
-    "_dipStreak": 1
+    "_dipStreak": 0
   },
   "AxolotlCoin": {
     "Original": 54231,
     "History": [
       54231,
       54754.216112,
-      55809.788375
+      55809.788375,
+      54379.541197
     ],
     "Category": "MEME COINS",
     "_dipStreak": 0
@@ -324,29 +356,32 @@
     "History": [
       101538,
       98822.073234,
-      100826.909244
+      100826.909244,
+      101661.660217
     ],
     "Category": "MEME COINS",
-    "_dipStreak": 1
+    "_dipStreak": 0
   },
   "DragonCoin": {
     "Original": 138462,
     "History": [
       138462,
       137895.203885,
-      139464.905815
+      139464.905815,
+      143347.659785
     ],
     "Category": "MEME COINS",
-    "_dipStreak": 1
+    "_dipStreak": 0
   },
   "BedrockCoin": {
     "Original": 86538,
     "History": [
       86538,
       87430.308233,
-      86158.253703
+      86158.253703,
+      85682.710058
     ],
     "Category": "MEME COINS",
-    "_dipStreak": 0
+    "_dipStreak": 1
   }
 }
