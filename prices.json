@@ -3,7 +3,8 @@
     "Original": 1153846,
     "History": [
       1153846,
-      1167689.637867
+      1167689.637867,
+      1199100.018743
     ],
     "Category": "Main",
     "_dipStreak": 0
@@ -12,7 +13,8 @@
     "Original": 576923,
     "History": [
       576923,
-      586603.840472
+      586603.840472,
+      577133.984466
     ],
     "Category": "Main",
     "_dipStreak": 0
@@ -21,34 +23,38 @@
     "Original": 1038462,
     "History": [
       1038462,
-      1033458.682036
+      1033458.682036,
+      1044313.616412
     ],
     "Category": "Main",
-    "_dipStreak": 0
+    "_dipStreak": 1
   },
   "Iron": {
     "Original": 92308,
     "History": [
       92308,
-      91265.288215
+      91265.288215,
+      90336.327053
     ],
     "Category": "Main",
-    "_dipStreak": 0
+    "_dipStreak": 1
   },
   "Copper": {
     "Original": 46154,
     "History": [
       46154,
-      45487.132388
+      45487.132388,
+      46300.570484
     ],
     "Category": "Main",
-    "_dipStreak": 0
+    "_dipStreak": 1
   },
   "Coal": {
     "Original": 28846,
     "History": [
       28846,
-      29384.564516
+      29384.564516,
+      28813.595176
     ],
     "Category": "Main",
     "_dipStreak": 0
@@ -57,16 +63,18 @@
     "Original": 103846,
     "History": [
       103846,
-      101651.459056
+      101651.459056,
+      103066.155908
     ],
     "Category": "Main",
-    "_dipStreak": 0
+    "_dipStreak": 1
   },
   "Emerald": {
     "Original": 403846,
     "History": [
       403846,
-      410999.268745
+      410999.268745,
+      418088.062141
     ],
     "Category": "Main",
     "_dipStreak": 0
@@ -75,25 +83,28 @@
     "Original": 3461538,
     "History": [
       3461538,
-      3383149.904297
+      3383149.904297,
+      3329087.166812
     ],
     "Category": "Main",
-    "_dipStreak": 0
+    "_dipStreak": 1
   },
   "G4MBLE": {
     "Original": 115385,
     "History": [
       115385,
-      112420.835113
+      112420.835113,
+      113539.332493
     ],
     "Category": "Main",
-    "_dipStreak": 0
+    "_dipStreak": 1
   },
   "Dirt": {
     "Original": 15000,
     "History": [
       15000,
-      15389.620052
+      15389.620052,
+      14956.979412
     ],
     "Category": "Penny Index",
     "_dipStreak": 0
@@ -102,16 +113,18 @@
     "Original": 30000,
     "History": [
       30000,
-      29397.369966
+      29397.369966,
+      29152.014958
     ],
     "Category": "Penny Index",
-    "_dipStreak": 0
+    "_dipStreak": 1
   },
   "Wheat": {
     "Original": 20769,
     "History": [
       20769,
-      21283.294574
+      21283.294574,
+      20779.618164
     ],
     "Category": "Penny Index",
     "_dipStreak": 0
@@ -120,16 +133,18 @@
     "Original": 34615,
     "History": [
       34615,
-      34275.610211
+      34275.610211,
+      35167.924684
     ],
     "Category": "Penny Index",
-    "_dipStreak": 0
+    "_dipStreak": 1
   },
   "Quartz": {
     "Original": 51923,
     "History": [
       51923,
-      53470.938405
+      53470.938405,
+      53680.553234
     ],
     "Category": "Penny Index",
     "_dipStreak": 0
@@ -138,7 +153,8 @@
     "Original": 17308,
     "History": [
       17308,
-      17411.084925
+      17411.084925,
+      17533.229151
     ],
     "Category": "Penny Index",
     "_dipStreak": 0
@@ -147,7 +163,8 @@
     "Original": 2884615,
     "History": [
       2884615,
-      2902321.033892
+      2902321.033892,
+      2975953.797788
     ],
     "Category": "Trending",
     "_dipStreak": 0
@@ -156,16 +173,18 @@
     "Original": 138462,
     "History": [
       138462,
-      136544.50833
+      136544.50833,
+      136860.351464
     ],
     "Category": "Trending",
-    "_dipStreak": 0
+    "_dipStreak": 1
   },
   "Mace": {
     "Original": 4038462,
     "History": [
       4038462,
-      4062286.114682
+      4062286.114682,
+      4157581.711234
     ],
     "Category": "Trending",
     "_dipStreak": 0
@@ -174,25 +193,28 @@
     "Original": 230769,
     "History": [
       230769,
-      224908.123438
+      224908.123438,
+      218815.161603
     ],
     "Category": "Trending",
-    "_dipStreak": 0
+    "_dipStreak": 1
   },
   "WitherStar": {
     "Original": 5769231,
     "History": [
       5769231,
-      5645472.772254
+      5645472.772254,
+      5789909.515889
     ],
     "Category": "Trending",
-    "_dipStreak": 0
+    "_dipStreak": 1
   },
   "VoidFragment": {
     "Original": 692308,
     "History": [
       692308,
-      702584.894238
+      702584.894238,
+      719639.265545
     ],
     "Category": "Trending",
     "_dipStreak": 0
@@ -201,7 +223,8 @@
     "Original": 8076923,
     "History": [
       8076923,
-      8132883.822376
+      8132883.822376,
+      8062759.635345
     ],
     "Category": "Trending",
     "_dipStreak": 0
@@ -210,7 +233,8 @@
     "Original": 57692,
     "History": [
       57692,
-      59380.229293
+      59380.229293,
+      58256.142432
     ],
     "Category": "MEME COINS",
     "_dipStreak": 0
@@ -219,7 +243,8 @@
     "Original": 69231,
     "History": [
       69231,
-      69843.61424
+      69843.61424,
+      68979.154612
     ],
     "Category": "MEME COINS",
     "_dipStreak": 0
@@ -228,7 +253,8 @@
     "Original": 48462,
     "History": [
       48462,
-      48619.06151
+      48619.06151,
+      47167.600463
     ],
     "Category": "MEME COINS",
     "_dipStreak": 0
@@ -237,16 +263,18 @@
     "Original": 63462,
     "History": [
       63462,
-      61674.267657
+      61674.267657,
+      63240.880769
     ],
     "Category": "MEME COINS",
-    "_dipStreak": 0
+    "_dipStreak": 1
   },
   "SteveCoin": {
     "Original": 42692,
     "History": [
       42692,
-      43504.241173
+      43504.241173,
+      43709.851479
     ],
     "Category": "MEME COINS",
     "_dipStreak": 0
@@ -255,7 +283,8 @@
     "Original": 70385,
     "History": [
       70385,
-      71741.088332
+      71741.088332,
+      70467.700077
     ],
     "Category": "MEME COINS",
     "_dipStreak": 0
@@ -264,7 +293,8 @@
     "Original": 32308,
     "History": [
       32308,
-      33006.429551
+      33006.429551,
+      33863.835567
     ],
     "Category": "MEME COINS",
     "_dipStreak": 0
@@ -273,16 +303,18 @@
     "Original": 27692,
     "History": [
       27692,
-      27653.308446
+      27653.308446,
+      27741.577354
     ],
     "Category": "MEME COINS",
-    "_dipStreak": 0
+    "_dipStreak": 1
   },
   "AxolotlCoin": {
     "Original": 54231,
     "History": [
       54231,
-      54754.216112
+      54754.216112,
+      55809.788375
     ],
     "Category": "MEME COINS",
     "_dipStreak": 0
@@ -291,25 +323,28 @@
     "Original": 101538,
     "History": [
       101538,
-      98822.073234
+      98822.073234,
+      100826.909244
     ],
     "Category": "MEME COINS",
-    "_dipStreak": 0
+    "_dipStreak": 1
   },
   "DragonCoin": {
     "Original": 138462,
     "History": [
       138462,
-      137895.203885
+      137895.203885,
+      139464.905815
     ],
     "Category": "MEME COINS",
-    "_dipStreak": 0
+    "_dipStreak": 1
   },
   "BedrockCoin": {
     "Original": 86538,
     "History": [
       86538,
-      87430.308233
+      87430.308233,
+      86158.253703
     ],
     "Category": "MEME COINS",
     "_dipStreak": 0
