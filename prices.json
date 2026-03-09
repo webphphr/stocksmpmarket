@@ -1,40 +1,282 @@
 {
-  "STOCKSMP INDEX": { "Original": 1153846, "History": [1153846], "Category": "Main" },
-  "Diamonds": { "Original": 576923, "History": [576923], "Category": "Main" },
-  "Netherite": { "Original": 1038462, "History": [1038462], "Category": "Main" },
-  "Iron": { "Original": 92308, "History": [92308], "Category": "Main" },
-  "Copper": { "Original": 46154, "History": [46154], "Category": "Main" },
-  "Coal": { "Original": 28846, "History": [28846], "Category": "Main" },
-  "Obsidian": { "Original": 103846, "History": [103846], "Category": "Main" },
-  "Emerald": { "Original": 403846, "History": [403846], "Category": "Main" },
-  "Beacon": { "Original": 3461538, "History": [3461538], "Category": "Main" },
-  "G4MBLE": { "Original": 115385, "History": [115385], "Category": "Main" },
-
-  "Dirt": { "Original": 15000, "History": [15000], "Category": "Penny Index" },
-  "Wood": { "Original": 30000, "History": [30000], "Category": "Penny Index" },
-  "Wheat": { "Original": 20769, "History": [20769], "Category": "Penny Index" },
-  "Redstone": { "Original": 34615, "History": [34615], "Category": "Penny Index" },
-  "Quartz": { "Original": 51923, "History": [51923], "Category": "Penny Index" },
-  "SlimeBall": { "Original": 17308, "History": [17308], "Category": "Penny Index" },
-
-  "Elytra": { "Original": 2884615, "History": [2884615], "Category": "Trending" },
-  "Gold": { "Original": 138462, "History": [138462], "Category": "Trending" },
-  "Mace": { "Original": 4038462, "History": [4038462], "Category": "Trending" },
-  "EnderPearl": { "Original": 230769, "History": [230769], "Category": "Trending" },
-  "WitherStar": { "Original": 5769231, "History": [5769231], "Category": "Trending" },
-  "VoidFragment": { "Original": 692308, "History": [692308], "Category": "Trending" },
-  "Totem of Undying": { "Original": 8076923, "History": [8076923], "Category": "Trending" },
-
-  "SeanCoin": { "Original": 57692, "History": [57692], "Category": "MEME COINS" },
-  "PiglinCoin": { "Original": 69231, "History": [69231], "Category": "MEME COINS" },
-  "CreeperCoin": { "Original": 48462, "History": [48462], "Category": "MEME COINS" },
-  "EnderCoin": { "Original": 63462, "History": [63462], "Category": "MEME COINS" },
-  "SteveCoin": { "Original": 42692, "History": [42692], "Category": "MEME COINS" },
-  "VillagerCoin": { "Original": 70385, "History": [70385], "Category": "MEME COINS" },
-  "PigCoin": { "Original": 32308, "History": [32308], "Category": "MEME COINS" },
-  "ChickenCoin": { "Original": 27692, "History": [27692], "Category": "MEME COINS" },
-  "AxolotlCoin": { "Original": 54231, "History": [54231], "Category": "MEME COINS" },
-  "HerobrineCoin": { "Original": 101538, "History": [101538], "Category": "MEME COINS" },
-  "DragonCoin": { "Original": 138462, "History": [138462], "Category": "MEME COINS" },
-  "BedrockCoin": { "Original": 86538, "History": [86538], "Category": "MEME COINS" }
+  "STOCKSMP INDEX": {
+    "Original": 1153846,
+    "History": [
+      1153846,
+      1156480.874617
+    ],
+    "Category": "Main"
+  },
+  "Diamonds": {
+    "Original": 576923,
+    "History": [
+      576923,
+      573870.094249
+    ],
+    "Category": "Main"
+  },
+  "Netherite": {
+    "Original": 1038462,
+    "History": [
+      1038462,
+      1035929.16477
+    ],
+    "Category": "Main"
+  },
+  "Iron": {
+    "Original": 92308,
+    "History": [
+      92308,
+      91076.498501
+    ],
+    "Category": "Main"
+  },
+  "Copper": {
+    "Original": 46154,
+    "History": [
+      46154,
+      45587.498304
+    ],
+    "Category": "Main"
+  },
+  "Coal": {
+    "Original": 28846,
+    "History": [
+      28846,
+      29106.487612
+    ],
+    "Category": "Main"
+  },
+  "Obsidian": {
+    "Original": 103846,
+    "History": [
+      103846,
+      102134.201731
+    ],
+    "Category": "Main"
+  },
+  "Emerald": {
+    "Original": 403846,
+    "History": [
+      403846,
+      406777.954622
+    ],
+    "Category": "Main"
+  },
+  "Beacon": {
+    "Original": 3461538,
+    "History": [
+      3461538,
+      3471076.189141
+    ],
+    "Category": "Main"
+  },
+  "G4MBLE": {
+    "Original": 115385,
+    "History": [
+      115385,
+      117287.586337
+    ],
+    "Category": "Main"
+  },
+  "Dirt": {
+    "Original": 15000,
+    "History": [
+      15000,
+      14800.020513
+    ],
+    "Category": "Penny Index"
+  },
+  "Wood": {
+    "Original": 30000,
+    "History": [
+      30000,
+      29582.844148
+    ],
+    "Category": "Penny Index"
+  },
+  "Wheat": {
+    "Original": 20769,
+    "History": [
+      20769,
+      20357.391029
+    ],
+    "Category": "Penny Index"
+  },
+  "Redstone": {
+    "Original": 34615,
+    "History": [
+      34615,
+      34583.908519
+    ],
+    "Category": "Penny Index"
+  },
+  "Quartz": {
+    "Original": 51923,
+    "History": [
+      51923,
+      52797.86026
+    ],
+    "Category": "Penny Index"
+  },
+  "SlimeBall": {
+    "Original": 17308,
+    "History": [
+      17308,
+      17102.955226
+    ],
+    "Category": "Penny Index"
+  },
+  "Elytra": {
+    "Original": 2884615,
+    "History": [
+      2884615,
+      2875647.070884
+    ],
+    "Category": "Trending"
+  },
+  "Gold": {
+    "Original": 138462,
+    "History": [
+      138462,
+      139690.720544
+    ],
+    "Category": "Trending"
+  },
+  "Mace": {
+    "Original": 4038462,
+    "History": [
+      4038462,
+      4003175.606018
+    ],
+    "Category": "Trending"
+  },
+  "EnderPearl": {
+    "Original": 230769,
+    "History": [
+      230769,
+      229686.474306
+    ],
+    "Category": "Trending"
+  },
+  "WitherStar": {
+    "Original": 5769231,
+    "History": [
+      5769231,
+      5707495.703511
+    ],
+    "Category": "Trending"
+  },
+  "VoidFragment": {
+    "Original": 692308,
+    "History": [
+      692308,
+      681144.885462
+    ],
+    "Category": "Trending"
+  },
+  "Totem of Undying": {
+    "Original": 8076923,
+    "History": [
+      8076923,
+      8138632.135861
+    ],
+    "Category": "Trending"
+  },
+  "SeanCoin": {
+    "Original": 57692,
+    "History": [
+      57692,
+      58464.839962
+    ],
+    "Category": "MEME COINS"
+  },
+  "PiglinCoin": {
+    "Original": 69231,
+    "History": [
+      69231,
+      67865.524271
+    ],
+    "Category": "MEME COINS"
+  },
+  "CreeperCoin": {
+    "Original": 48462,
+    "History": [
+      48462,
+      48159.200998
+    ],
+    "Category": "MEME COINS"
+  },
+  "EnderCoin": {
+    "Original": 63462,
+    "History": [
+      63462,
+      63925.861183
+    ],
+    "Category": "MEME COINS"
+  },
+  "SteveCoin": {
+    "Original": 42692,
+    "History": [
+      42692,
+      43032.417108
+    ],
+    "Category": "MEME COINS"
+  },
+  "VillagerCoin": {
+    "Original": 70385,
+    "History": [
+      70385,
+      70393.19991
+    ],
+    "Category": "MEME COINS"
+  },
+  "PigCoin": {
+    "Original": 32308,
+    "History": [
+      32308,
+      32594.258523
+    ],
+    "Category": "MEME COINS"
+  },
+  "ChickenCoin": {
+    "Original": 27692,
+    "History": [
+      27692,
+      27759.843653
+    ],
+    "Category": "MEME COINS"
+  },
+  "AxolotlCoin": {
+    "Original": 54231,
+    "History": [
+      54231,
+      53267.715107
+    ],
+    "Category": "MEME COINS"
+  },
+  "HerobrineCoin": {
+    "Original": 101538,
+    "History": [
+      101538,
+      100568.012074
+    ],
+    "Category": "MEME COINS"
+  },
+  "DragonCoin": {
+    "Original": 138462,
+    "History": [
+      138462,
+      138541.41473
+    ],
+    "Category": "MEME COINS"
+  },
+  "BedrockCoin": {
+    "Original": 86538,
+    "History": [
+      86538,
+      84976.880531
+    ],
+    "Category": "MEME COINS"
+  }
 }
